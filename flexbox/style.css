@@ -8,12 +8,31 @@
 
 body{
 
-    background: linear-gradient();
+    background: linear-gradient(to right, #ff5e62, #ff9966);
 }
 
 div{
 
     margin: 0 auto;
     background-color: white;
+    max-width: 1000px;
+    height: 100vh;
+}
+
+header{
+
+
+
+
+}
+
+main{
+
+
+}
+
+footer{
+
+
 }
 
