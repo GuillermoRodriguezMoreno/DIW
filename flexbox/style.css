@@ -21,9 +21,14 @@ div{
 
 header{
 
+    background-color: rgb(63, 152, 236);
 
 
+}
 
+nav ul{
+
+    list-style: none;
 }
 
 #contenidoPrincipal{
@@ -31,8 +36,33 @@ header{
 
 }
 
+#servicio1{
+
+    background-color: red;
+}
+
+#servicio2{
+
+    background-color: purple;
+    
+}
+
+#servicio3{
+
+    background-color: blue;
+    
+}
+
+
+
+aside{
+
+    background-color: rgb(63, 152, 236);
+
+}
+
 footer{
 
-
+        background-color: purple;
 }
 
