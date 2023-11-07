@@ -1,3 +1,11 @@
+/*
+
+- TABLET
+    - Margen entre articulo
+    - Altura de articulos
+    - Margen en todas las vistas
+*/
+
 *{
 
     padding: 0;
@@ -11,11 +19,109 @@
 
 body{
 
-    background-color: lightgray
+    background-color: lightgray;
+    
 }
 
 div{
 
     max-width: 1100px;
     margin: 0 auto;
+}
+
+article{
+
+    background-color: white;
+    text-transform: uppercase;
+}
+
+img{
+
+    max-width: 100%;
+
+}
+
+a{
+
+    text-decoration: none;
+    color: fuchsia;
+
+}
+
+
+/* MOVIL */
+
+#contenedorPrincipal{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+h1{
+
+    text-align: center;
+    margin: 16px 0 8px 0;
+
+}
+
+article{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+}
+
+p{
+
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.boton{
+
+    background-color: rgb(76, 76, 240);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+
+
+
+/* TABLET */
+
+@media screen and (min-width:468px) {
+
+    #contenedorPrincipal{
+
+        flex-direction: row;
+    }
+
+    h1{
+
+        flex: 1 0 100%;
+
+    }
+
+    article{
+
+        flex: 1 0 45%;
+    }
+}
+
+/* ESCRITORIO */
+
+@media screen and (min-width:768px) {
+
+    article{
+
+        flex: 1 0 30%;
+        margin: 8px;
+    }
+
 }
