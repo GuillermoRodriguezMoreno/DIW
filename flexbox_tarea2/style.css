@@ -1,10 +1,3 @@
-/*
-
-- TABLET
-    - Margen entre articulo
-    - Altura de articulos
-    - Margen en todas las vistas
-*/
 
 *{
 
@@ -118,7 +111,11 @@ p{
     article{
 
         flex: 1 0 40%;
-        margin: 16px;
+    }
+
+    .margen{
+
+        margin-right: 16px;
     }
 }
 
