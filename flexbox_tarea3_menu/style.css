@@ -7,17 +7,124 @@
 }
 
 /* Estilos Generales */
+p{
+    color: white;
+    font-size: 13px;
+}
+
+a{
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+i{
+    color: white;
+    font-size: 22px;
+    margin-right: 10px;
+
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+
+    padding: 10px;
+}
 
 /* MOVIL */
 
-#menuSencillo{
+    nav{
 
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
 
-    background-color: rgb(59, 59, 199);
-}
+    }
+
+    /* Menu Sencillo */
+
+        #menuSencillo ul li:hover{
+
+            background-color: rgb(42, 42, 141);
+        }
+
+    /* Con iconos */
+   
+        #menuConIconos ul{
+
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #menuConIconos ul li{
+
+            flex: 1 0 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        @media screen and (max-width:480px) {
+
+            .ocultar{
+
+                display: none;
+            }
+
+            #menuConIconos ul{
+
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+
+    /* Dropdown menu */
+
+        #menuDropdown ul li ul{
+
+            padding: 20px;
+        }
+
+        #menuDropdown{
+
+            text-align: start;
+        }
+
+        #menuDropdown ul li:hover{
+
+            background-color: rgb(42, 42, 141);
+        }
+
+        #menuDropdown ul li ul li:hover{
+
+            background-color: pink;
+        }
+
+    /*  Menu Redes Sociales */
+
+    #menuRedesSociales{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #menuRedesSociales ul{
+
+        display: flex;
+        flex-direction: row;
+    }
+
 
 
 /* ESCRITORIO */
@@ -25,4 +132,11 @@
 
     
 
+}
+
+/* Clases */
+
+.fondoAzul{
+
+    background-color: rgb(59, 59, 199);
 }
