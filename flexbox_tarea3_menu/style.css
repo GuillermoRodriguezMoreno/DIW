@@ -1,3 +1,17 @@
+
+/*
+    Falta:
+
+        - Hacer los 2 menus desplegables
+        - Algunos efectos de hover
+        - alinear redes sociales
+
+    Preguntar:
+
+        - Alinear iconos en menu redes sociales
+
+*/
+
 *{
 
     padding: 0;
@@ -57,10 +71,10 @@ li{
    
         #menuConIconos ul{
 
-            padding: 10px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            
         }
 
         #menuConIconos ul li{
@@ -69,8 +83,13 @@ li{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            padding: 10px;
+            padding: 20px;
 
+        }
+
+        #menuConIconos ul li:hover{
+
+            background-color: rgb(42, 42, 141);
         }
 
         @media screen and (max-width:480px) {
@@ -112,25 +131,132 @@ li{
 
     /*  Menu Redes Sociales */
 
-    #menuRedesSociales{
+        #menuRedesSociales{
 
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
 
-    #menuRedesSociales ul{
+        #menuRedesSociales ul{
 
-        display: flex;
-        flex-direction: row;
-    }
+            display: flex;
+            flex-direction: row;
+        }
 
+        #menuRedesSociales ul li:hover{
 
+            background-color: rgb(42, 42, 141);
+        }
+
+    /* Dropdown menu con redes sociales */
+
+        #menuDropRedesSociales ul li ul{
+
+            padding: 20px;
+        }
+
+        #menuDropRedesSociales{
+
+            text-align: start;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #menuDropRedesSociales ul li:hover{
+
+            background-color: rgb(42, 42, 141);
+        }
+
+        #menuDropRedesSociales ul li ul li:hover{
+
+            background-color: pink;
+        }
+
+        #dropRedesSociales{
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
 
 /* ESCRITORIO */
 @media screen and (min-width:768px) {
 
-    
+    body{
+
+        background: linear-gradient(to right, #ff5e62, #ff9966);
+    }
+
+    #contenedor{
+
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+    }
+
+    nav{
+
+        flex-direction: row;
+    }
+
+    /* Menu sencillo */
+
+        #menuSencillo ul{
+
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        #menuSencillo ul li{
+
+            flex-grow: 1;
+        }
+
+    /* menuConIconos */
+
+        #menuConIconos ul{
+
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+        }
+
+        #menuConIconos ul li{
+
+            flex: 1 0 20%;
+        }
+
+    /* Dropdown menu */
+
+    #menuDropdown ul{
+
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+    }
+
+    #menuDropdown ul li{
+
+        flex: 1 0 20%;
+    }
+
+    #menuDropdown ul li ul{
+
+        display: none;
+    }
+
+
+    /* Dropdown menu con redes sociales */
+
+    #menuDropRedes{
+
+        display: flex;
+        flex-direction: row;
+    }
 
 }
 
