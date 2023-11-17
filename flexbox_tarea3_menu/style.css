@@ -5,10 +5,12 @@
         - Hacer los 2 menus desplegables
         - Algunos efectos de hover
         - alinear redes sociales
+        - altura ultimo menu
 
     Preguntar:
 
         - Alinear iconos en menu redes sociales
+        - Altura ultimo menu
 
 */
 
@@ -257,6 +259,7 @@ li{
         display: flex;
         flex-direction: row;
     }
+    
 
 }
 
