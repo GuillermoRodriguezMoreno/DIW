@@ -252,6 +252,13 @@ li{
         display: none;
     }
 
+    #menuDropdown ul li:hover ul{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
 
     /* Dropdown menu con redes sociales */
 
@@ -264,6 +271,14 @@ li{
     #menuDropRedes li ul{
 
         display: none;
+        
+    }
+
+    #menuDropRedes li:hover ul{
+
+        display: flex;
+        flex-direction: column;
+
     }
 
 }
