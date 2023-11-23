@@ -186,6 +186,7 @@ li{
 /* ESCRITORIO */
 @media screen and (min-width:768px) {
 
+
     body{
 
         background: linear-gradient(to right, #ff5e62, #ff9966);
@@ -259,7 +260,11 @@ li{
         display: flex;
         flex-direction: row;
     }
-    
+
+    #menuDropRedes li ul{
+
+        display: none;
+    }
 
 }
 
