@@ -1,0 +1,17 @@
+@mixin tablet($pixelesTablet){
+
+    @media only screen and (min-width: #{$pixelesTablet}) {
+
+        @content;
+        
+    }
+}
+
+@mixin escritorio($pixelesEscritorio){
+
+    @media only screen and (min-width: #{$pixelesEscritorio}) {
+
+        @content;
+        
+    }
+}
