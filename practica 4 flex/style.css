@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-.imgArticulo{
-
-    width: 100%;
-}
-
 /* MOVIL */
 
     /* NAV */
@@ -45,7 +40,6 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            
         }
 
         div section{
@@ -66,7 +60,6 @@
             flex: 1 0 50%;
             display: flex;
             flex-direction: column;
-
         }
 
         footer section a{
