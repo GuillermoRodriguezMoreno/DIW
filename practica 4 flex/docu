@@ -1,0 +1,29 @@
+uso mixin
+
+ul{
+
+    propiedades MOVIL
+    @include tablet(){
+
+        propiedades tablet
+    }
+
+    li{
+        propiedades li
+    }
+}
+
+mixin boton
+
+@mixin boton($color){
+
+    propiedades;
+    background-color: $color
+}
+
+usar clase para boton
+
+.botonHeader {
+
+    @include boton (red)
+}
