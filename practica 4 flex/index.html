@@ -8,12 +8,12 @@
 </head>
 <body>
     
-    <nav>
+    <nav class="container">
 
         <a href=""><img src="img/logo.jpg" alt=""></a>
         <a href=""><img src="img/cart.png" alt=""></a>
 
-        <section class="ocultar">
+        <section class="ocultarMovil">
 
             <section>
 
@@ -44,38 +44,51 @@
 
     <header>
 
-        <section>
+        <section id="imagenPortatil">
 
-            <h1>Aprende algo nuevo</h1>
-            <p>Todos los cursos a $15</p>
-            <p>¿Que te gustaria aprender?<img src="img/lupa.png" alt=""></p>
-
+            <div class="container">
+                <h1>Aprende algo nuevo</h1>
+                <p>Todos los cursos a $15</p>
+                <div id="barraDeBusqueda">
+                    <input type="text" placeholder="¿Que te gustaria aprender?">
+                    <img src="img/lupa.png" alt="">
+                </div>
+            </div>
+            
         </section>
 
-        <section>
+        <section id="iconosHeader">
 
-            <img src="img/icono1.png" alt="">
-            <p>20.000 Cursos en linea. Explora los temas mas recientes</p>
+            <div class="container">
+                <section>
+                    <img src="img/icono1.png" alt="">
+                    <p>20.000 Cursos en linea. Explora los temas mas recientes</p>
+                </section>
 
-            <img src="img/icono2.png" alt="">
-            <p>Instructores expertos. Aprende con distintos estilos</p>
+                <section>    
+                    <img src="img/icono2.png" alt="">
+                    <p>Instructores expertos. Aprende con distintos estilos</p>
+                </section>
 
-            <img src="img/icono3.png" alt="">
-            <p>Acceso de por vida. Aprende a tu ritmo</p>
+                <section>    
+                    <img src="img/icono3.png" alt="">
+                    <p>Acceso de por vida. Aprende a tu ritmo</p>
+                </section>
+            </div>
 
         </section>
 
     </header>
 
-    <main>
+    <main class="container">
 
         <h1>Cursos En Linea</h1>
 
-        <div>
+        <div id="cursos">
 
             <section>
 
-                <img src="img/curso1.jpg" alt="">
+                <img class="anchura100" src="img/curso1.jpg" alt="">
 
                 <h2>HTML5, CSS3, JavaScript para princiantes</h2>
 
@@ -93,7 +106,7 @@
 
             <section>
 
-                <img src="img/curso2.jpg" alt="">
+                <img class="anchura100" src="img/curso2.jpg" alt="">
 
                 <h2>Curso de Comida Vegetariana</h2>
 
@@ -111,7 +124,7 @@
 
             <section>
 
-                <img src="img/curso3.jpg" alt="">
+                <img class="anchura100" src="img/curso3.jpg" alt="">
 
                 <h2>Guitarra para Principiantes</h2>
 
@@ -129,7 +142,7 @@
 
             <section>
 
-                <img src="img/curso4.jpg" alt="">
+                <img class="anchura100" src="img/curso4.jpg" alt="">
 
                 <h2>Huerto en tu casa</h2>
 
@@ -146,7 +159,7 @@
             </section>
             <section>
 
-                <img src="img/curso5.jpg" alt="">
+                <img class="anchura100" src="img/curso5.jpg" alt="">
 
                 <h2>Decoracion con productos de tu hogar</h2>
 
@@ -164,7 +177,7 @@
 
             <section>
 
-                <img src="img/curso1.jpg" alt="">
+                <img class="anchura100" src="img/curso1.jpg" alt="">
 
                 <h2>Diseño Web para principiantes</h2>
 
@@ -182,7 +195,7 @@
 
             <section>
 
-                <img src="img/curso2.jpg" alt="">
+                <img class="anchura100" src="img/curso2.jpg" alt="">
 
                 <h2>Comida Mexicana para principiantes</h2>
 
@@ -200,7 +213,7 @@
 
             <section>
 
-                <img src="img/curso3.jpg" alt="">
+                <img class="anchura100" src="img/curso3.jpg" alt="">
 
                 <h2>Estudio Musical en tu Casa</h2>
 
@@ -217,7 +230,7 @@
             </section>
             <section>
 
-                <img src="img/curso4.jpg" alt="">
+                <img class="anchura100" src="img/curso4.jpg" alt="">
 
                 <h2>Cosecha tus propias frutas y verduras</h2>
 
@@ -235,7 +248,7 @@
 
             <section>
 
-                <img src="img/curso5.jpg" alt="">
+                <img class="anchura100" src="img/curso5.jpg" alt="">
 
                 <h2>Prepara galletas caseras</h2>
 
@@ -253,7 +266,7 @@
 
             <section>
 
-                <img src="img/curso1.jpg" alt="">
+                <img class="anchura100" src="img/curso1.jpg" alt="">
 
                 <h2>JavaScript Moderno con ES6</h2>
 
@@ -271,7 +284,7 @@
 
             <section>
 
-                <img src="img/curso2.jpg" alt="">
+                <img class="anchura100" src="img/curso2.jpg" alt="">
 
                 <h2>100 Recetas de Comida Natural</h2>
 
@@ -293,23 +306,25 @@
 
     <footer>
 
-        <section>
+        <div class="container">
+            <section>
 
-            <a href="">Para tu negocio</a>
-            <a href="">Convertirse en instructor</a>
-            <a href="">Aplicaciones Moviles</a>
-            <a href="">Soporte</a>
-            <a href="">Temas</a>
+                <a href="">Para tu negocio</a>
+                <a href="">Convertirse en instructor</a>
+                <a href="">Aplicaciones Moviles</a>
+                <a href="">Soporte</a>
+                <a href="">Temas</a>
 
-        </section>
+            </section>
 
-        <section>
+            <section>
 
-            <a href="">¿Quienes Somos?</a>
-            <a href="">Empleo</a>
-            <a href="">Blog</a>
+                <a href="">¿Quienes Somos?</a>
+                <a href="">Empleo</a>
+                <a href="">Blog</a>
 
-        </section>
+            </section>
+        </div>
 
     </footer>
 

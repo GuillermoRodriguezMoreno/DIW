@@ -1,4 +1,10 @@
 
+/*
+    -tamaño iconos header
+    - preguntar texto header
+
+*/
+
 @import "_variables.scss";
 @import "_mixin.scss";
 
@@ -12,6 +18,24 @@
 }
 
 
+
+.ocultarMovil{
+
+    display: none;
+}
+
+/*.container{
+
+    margin: 0 auto;
+    max-width: 1200px;
+}*/
+
+.container{
+
+    margin: 20px;
+}
+
+
 /* NAV */
 
     nav{
@@ -19,16 +43,80 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        @include tablet($pixelesTablet){
+        padding: 20px 0;
+    }
 
+/* HEADER */
 
+    header{
+
+        color: $_blanco;
+        display: flex;
+        flex-direction: column;
+
+        #imagenPortatil{
+
+            /* propiedad imagen fondo */
+            background-image: url("img/hero.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            /**************************/
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            div{
+
+                display: flex;
+                flex-direction: column;
+
+                h1{
+                    
+                    margin-bottom: 20px;
+                }
+
+                #barraDeBusqueda{
+
+                    background-color: white;
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 10px;
+    
+                    input{
+    
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+
+        #iconosHeader{
+
+            background: $_gradienteHeader;
+
+            div{
+
+                display: flex;
+                flex-direction: column;
+            }
+            
+            section{
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                text-align: center;
+
+                p{
+                    align-self: center;
+                }
+            }
         }
     }
 
-    .ocultar{
-
-        display: none;
-    }
+    
 
 /* MAIN */
 
@@ -36,23 +124,28 @@
 
         display: flex;
         flex-direction: column;
-    }
 
-    main h1{
+        h1{
 
-        align-self: center;
-    }
+            text-align: center;
+        }
 
-    div{
+        #cursos{
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
 
-    div section{
+            section{
 
-        flex: 1 0 40%;
+                flex: 1 0 40%;
+
+                .anchura100{
+
+                    width: 100%;
+                }
+            }
+        }
     }
 
 /* FOOTER */
@@ -60,17 +153,21 @@
     footer{
 
         background-color: black;
-        display: flex;
-    }
 
-    footer section{
+        div{
 
-        flex: 1 0 50%;
-        display: flex;
-        flex-direction: column;
-    }
+            display: flex;
+            flex-direction: row;
 
-    footer section a{
+            section{
 
-        color: white;
+                flex: 1 0 40%;
+                display: flex;
+                flex-direction: column;
+
+                a{
+                    color: $_blanco;
+                }
+            }
+        }
     }
