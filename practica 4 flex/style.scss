@@ -1,13 +1,5 @@
-
-/*
-    -tamaño iconos header
-    - preguntar texto header
-
-*/
-
 @import "_variables.scss";
 @import "_mixin.scss";
-
 
 *{
 
@@ -17,40 +9,116 @@
     box-sizing: border-box;
 }
 
+/* Clases */
 
+    .ocultar{
 
-.ocultarMovil{
+        display: none;
+    }
 
-    display: none;
-}
+    .container{
 
-/*.container{
+        margin: 20px;
 
-    margin: 0 auto;
-    max-width: 1200px;
-}*/
+        @include escritorio(){
 
-.container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+    }
 
-    margin: 20px;
-}
+    /* Anchura de las imagenes de los cursos*/
+    .anchura100{
 
+        width: 100%;
+    }
+
+    .justifyEnd{
+
+        align-self: flex-end;
+        font-weight: bold;
+    }
+
+    /* Margen imagenes estrellas*/
+    .margenEstrellas{
+
+        margin: 10px 0px;
+        /* para que no coja todo el espacio en horizontal */
+        align-self: flex-start;
+    }
+
+    /* margin/padding contenedor cursos */
+    .textoCurso{
+
+        margin: 10px;
+    }
 
 /* NAV */
 
     nav{
 
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px 0;
+        
+        #carrito:hover .ocultar{
+
+            display: flex;
+        }
+
+        #contenidoCarrito{
+
+            position: absolute;
+            right: 0;
+            top: 60px;
+            background-color: white;
+            padding: 10px;
+
+            flex-direction: column;
+
+            div{
+
+                display: flex;
+                flex-direction: row;
+                flex-basis: 50%;
+
+                section{
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: 5px;
+
+                    img{
+
+                        width: 100px;
+                    }
+
+                    span{
+
+                        text-align: center;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            a{
+                @include boton(purple);
+
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
     }
 
 /* HEADER */
 
     header{
 
-        color: $_blanco;
+        color: $_headerColorFondo;
         display: flex;
         flex-direction: column;
 
@@ -64,29 +132,61 @@
             /**************************/
 
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
+            align-items: center;
 
             div{
 
+                flex-grow: 1;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                
 
-                h1{
-                    
-                    margin-bottom: 20px;
+                @include tablet(){
+
+                    justify-content: flex-start;
+                }
+    
+                @include escritorio(){
+    
+                    justify-content: flex-start;
                 }
 
-                #barraDeBusqueda{
+                section{
 
-                    background-color: white;
+                    flex-grow: 1;
                     display: flex;
-                    flex-direction: row;
-                    margin-top: 10px;
+                    flex-direction: column;
+
+                    @include tablet{
+
+                        flex: 0 0 400px;
+                    }
     
-                    input{
+                    @include escritorio(){
     
-                        flex-grow: 1;
+                        flex: 0 0 400px;
+                    }
+    
+                    h1{
+                        
+                        margin-bottom: 20px;
+                        font-size: 28px;
+                    }
+    
+                    #barraDeBusqueda{
+    
+                        background-color: white;
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 10px;
+                        padding: 5px;
+        
+                        input{
+        
+                            flex-grow: 1;
+                        }
                     }
                 }
             }
@@ -94,25 +194,37 @@
 
         #iconosHeader{
 
-            background: $_gradienteHeader;
-
+            background: $_headerGradiente;
+            
             div{
 
                 display: flex;
                 flex-direction: column;
-            }
-            
-            section{
 
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                text-align: center;
+                @include escritorio(){
 
-                p{
-                    align-self: center;
+                    flex-direction: row;
+                    justify-content: space-between;
                 }
-            }
+
+                section{
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 10px;
+                                       
+                    img{
+
+                        width: 10%;
+                    }
+    
+                    p{
+                        flex-grow: 1;
+                    }
+                }
+            }  
         }
     }
 
@@ -128,6 +240,8 @@
         h1{
 
             text-align: center;
+            margin-bottom: 20px;
+            
         }
 
         #cursos{
@@ -135,14 +249,54 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            @include inferior280px{
+
+                flex-direction: column;   
+            }
 
             section{
 
-                flex: 1 0 40%;
+                border: 1px solid grey;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-basis: calc(100%/2 - 1rem);
 
-                .anchura100{
+                @include tablet(){
 
-                    width: 100%;
+                    flex-basis: calc(100%/3 - 1rem);
+                }
+
+                @include escritorio(){
+
+                    flex-basis: calc(100%/4 - 1rem);
+                }
+
+                @include inferior280px{
+
+                    border: none;
+                }
+
+                div{
+
+                    display: flex;
+                    flex-direction: column;
+
+                    h2{
+
+                        margin: 10px 0px;
+                    }
+                    
+                    a{
+
+                        margin-top: 10px;
+                        text-align: center;
+                        @include boton($_btnCursoColor);
+                    }
+
                 }
             }
         }
@@ -154,19 +308,36 @@
 
         background-color: black;
 
-        div{
+        @include escritorio(){
 
             display: flex;
             flex-direction: row;
+        }
+
+        div{
+
+            @include escritorio(){
+
+                flex-grow: 1;
+            }
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
 
             section{
 
-                flex: 1 0 40%;
+                @include escritorio(){
+
+                    flex-basis: 25%;
+                }
+
+                flex-basis: 50%;
                 display: flex;
                 flex-direction: column;
 
                 a{
-                    color: $_blanco;
+                    color: white;
                 }
             }
         }

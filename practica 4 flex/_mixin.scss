@@ -1,18 +1,35 @@
 
-@mixin tablet($pixelesTablet){
+@mixin tablet(){
 
-    @media only screen and (min-width: #{$pixelesTablet}) {
+    @media only screen and (min-width: #{$_pixelesTablet}) {
 
         @content;
         
     }
 }
 
-@mixin escritorio($pixelesEscritorio){
+@mixin escritorio(){
 
-    @media only screen and (min-width: #{$pixelesEscritorio}) {
+    @media only screen and (min-width: #{$_pixelesEscritorio}) {
 
         @content;
         
     }
+}
+
+@mixin inferior280px(){
+
+    @media only screen and (max-width: 280px) {
+
+        @content;
+        
+    }
+}
+
+@mixin boton($color){
+
+    background-color: $color;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
 }

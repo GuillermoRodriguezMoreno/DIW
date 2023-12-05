@@ -11,34 +11,40 @@
     <nav class="container">
 
         <a href=""><img src="img/logo.jpg" alt=""></a>
-        <a href=""><img src="img/cart.png" alt=""></a>
+        <span id="carrito"><img src="img/cart.png" alt="">
+            
+            <section id="contenidoCarrito" class="ocultar">
 
-        <section class="ocultarMovil">
-
-            <section>
-
-                <span>Imagen</span>
-                <img src="img/curso1.jpg" alt="">
-
+                <div>
+    
+                    <section id="imagen">
+    
+                        <span>Imagen</span>
+                        <img src="img/curso1.jpg" alt="">
+    
+                    </section>
+    
+                    <section id="Nombre">
+    
+                        <span>Nombre</span>
+                        <p>CSS Grid y Flexbox Construye + 10 Proyectos</p>
+    
+                    </section>
+    
+                    <section id="precio">
+    
+                        <span>Precio</span>
+                        <p>$15</p>
+    
+                    </section>
+    
+                </div>    
+    
+                <a href="">Vaciar Carrito</a>
+    
             </section>
-
-            <section>
-
-                <span>Nombre</span>
-                <p>CSS Grid y Flexbox Construye + 10 Proyectos</p>
-
-            </section>
-
-            <section>
-
-                <span>Precio</span>
-                <p>$15</p>
-
-            </section>
-
-            <a href="">Vaciar Carrito</a>
-
-        </section>
+        
+        </span>
 
     </nav>
 
@@ -47,12 +53,14 @@
         <section id="imagenPortatil">
 
             <div class="container">
-                <h1>Aprende algo nuevo</h1>
-                <p>Todos los cursos a $15</p>
-                <div id="barraDeBusqueda">
-                    <input type="text" placeholder="¿Que te gustaria aprender?">
-                    <img src="img/lupa.png" alt="">
-                </div>
+                <section>
+                    <h1>Aprende algo nuevo</h1>
+                    <p>Todos los cursos a $15</p>
+                    <div id="barraDeBusqueda">
+                        <input type="text" placeholder="¿Que te gustaria aprender?">
+                        <img src="img/lupa.png" alt="">
+                    </div>
+                </section>
             </div>
             
         </section>
@@ -90,17 +98,19 @@
 
                 <img class="anchura100" src="img/curso1.jpg" alt="">
 
-                <h2>HTML5, CSS3, JavaScript para princiantes</h2>
+                <div class="textoCurso">
+                    <h2>HTML5, CSS3, JavaScript para princiantes</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -108,17 +118,19 @@
 
                 <img class="anchura100" src="img/curso2.jpg" alt="">
 
-                <h2>Curso de Comida Vegetariana</h2>
+                <div class="textoCurso">
+                    <h2>Curso de Comida Vegetariana</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -126,17 +138,19 @@
 
                 <img class="anchura100" src="img/curso3.jpg" alt="">
 
-                <h2>Guitarra para Principiantes</h2>
+                <div class="textoCurso">
+                    <h2>Guitarra para Principiantes</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -144,34 +158,38 @@
 
                 <img class="anchura100" src="img/curso4.jpg" alt="">
 
-                <h2>Huerto en tu casa</h2>
+                <div class="textoCurso">
+                    <h2>Huerto en tu casa</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
             <section>
 
                 <img class="anchura100" src="img/curso5.jpg" alt="">
 
-                <h2>Decoracion con productos de tu hogar</h2>
+                <div class="textoCurso">
+                    <h2>Decoracion con productos de tu hogar</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -179,17 +197,19 @@
 
                 <img class="anchura100" src="img/curso1.jpg" alt="">
 
-                <h2>Diseño Web para principiantes</h2>
+                <div class="textoCurso">
+                    <h2>Diseño Web para principiantes</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -197,17 +217,19 @@
 
                 <img class="anchura100" src="img/curso2.jpg" alt="">
 
-                <h2>Comida Mexicana para principiantes</h2>
+                <div class="textoCurso">
+                    <h2>Comida Mexicana para principiantes</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -215,34 +237,38 @@
 
                 <img class="anchura100" src="img/curso3.jpg" alt="">
 
-                <h2>Estudio Musical en tu Casa</h2>
+                <div class="textoCurso">
+                    <h2>Estudio Musical en tu Casa</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
             <section>
 
                 <img class="anchura100" src="img/curso4.jpg" alt="">
 
-                <h2>Cosecha tus propias frutas y verduras</h2>
+                <div class="textoCurso">
+                    <h2>Cosecha tus propias frutas y verduras</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -250,17 +276,19 @@
 
                 <img class="anchura100" src="img/curso5.jpg" alt="">
 
-                <h2>Prepara galletas caseras</h2>
+                <div class="textoCurso">
+                    <h2>Prepara galletas caseras</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -268,17 +296,19 @@
 
                 <img class="anchura100" src="img/curso1.jpg" alt="">
 
-                <h2>JavaScript Moderno con ES6</h2>
+                <div class="textoCurso">
+                    <h2>JavaScript Moderno con ES6</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 
@@ -286,17 +316,19 @@
 
                 <img class="anchura100" src="img/curso2.jpg" alt="">
 
-                <h2>100 Recetas de Comida Natural</h2>
+                <div class="textoCurso">
+                    <h2>100 Recetas de Comida Natural</h2>
 
-                <p>Juan Pedro</p>
+                    <p>Juan Pedro</p>
 
-                <img src="img/estrellas.png" alt="">
+                    <img class="margenEstrellas" src="img/estrellas.png" alt="">
 
-                <small>$200</small>
+                    <small>$200</small>
 
-                <p>$15</p>
+                    <p class="justifyEnd">$15</p>
 
-                <a href="">Agregar Al Carrito</a>
+                    <a href="">Agregar Al Carrito</a>
+                </div>
                 
             </section>
 

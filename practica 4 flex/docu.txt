@@ -38,3 +38,32 @@ usar clase para boton
 - activar autoprefixer
 
 mixins se usa como clase pero solo cuando un elemento modifica dicho mixin por ejemplo un boton
+
+
+/////////////////////////////
+
+
+escritorio{
+
+    - formulario justificado a la izquierda
+    - 4 cursos
+    - footer dos columnas 50% justificadas a la izquierda
+}
+
+- tablet 768px{
+
+    - iconos vertical con iconos a la izquierda, texto centrado en espacio disponible  
+    - 4 cursos
+    - footer ocupa 100% justificadas a la izquierda
+}
+
+movil 480px{
+
+    -formulario 100% con margenes a los lados
+    - 2 cursos
+}
+
+-280px{
+
+    - 1 curso
+}
