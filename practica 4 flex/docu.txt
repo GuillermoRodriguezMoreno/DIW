@@ -32,3 +32,9 @@ usar clase para boton
 
     @include boton (red)
 }
+
+/////////////////////////////////////
+
+- activar autoprefixer
+
+mixins se usa como clase pero solo cuando un elemento modifica dicho mixin por ejemplo un boton
