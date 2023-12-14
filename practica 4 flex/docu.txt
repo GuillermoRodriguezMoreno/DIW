@@ -35,7 +35,9 @@ usar clase para boton
 
 /////////////////////////////////////
 
-- activar autoprefixer
+- configurar sass compiler para activar autoprefixer
+
+- hacer margen de articulos con flex space between -> tlf( hijos flex basis calc(50% - $margin(1rem))) tablet 33% escritorio 25%
 
 mixins se usa como clase pero solo cuando un elemento modifica dicho mixin por ejemplo un boton
 

@@ -138,6 +138,7 @@ header #imagenPortatil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -181,6 +182,14 @@ header #imagenPortatil div section {
           flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header #imagenPortatil div {
+  flex-grow: 1;
+>>>>>>> ini
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -210,10 +219,15 @@ header #imagenPortatil div section #barraDeBusqueda {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+=======
+  flex-grow: 0;
+  flex-direction: row;
+>>>>>>> ini
   margin-top: 10px;
   padding: 5px;
 }
@@ -230,10 +244,15 @@ header #iconosHeader div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+=======
+  flex-direction: column;
+  justify-content: space-around;
+>>>>>>> ini
 }
 @media only screen and (min-width: 768px) {
   header #iconosHeader div {
@@ -263,10 +282,20 @@ header #iconosHeader div section {
 header #iconosHeader div section img {
   width: 10%;
 }
+<<<<<<< HEAD
 header #iconosHeader div section p {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+=======
+header #iconosHeader section img {
+  width: 30px;
+  height: 30px;
+}
+header #iconosHeader section p {
+  flex-grow: 1;
+  align-self: center;
+>>>>>>> ini
 }
 
 /* MAIN */
@@ -287,6 +316,7 @@ main #cursos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -307,6 +337,9 @@ main #cursos {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+=======
+  flex-direction: column;
+>>>>>>> ini
 }
 main #cursos section {
   border: 1px solid grey;
