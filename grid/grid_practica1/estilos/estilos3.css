@@ -6,9 +6,20 @@
     box-sizing: border-box;
 }
 
+img{
+
+    width: 100%;
+}
+
+article{
+
+    background-color: pink;
+    padding: 10px;
+}
+
 div{
 
-    height: 100vh;
+    /*min-height: 100vh;*/
     max-width: 900px;
     margin: 0 auto;
     display: grid;
@@ -26,6 +37,7 @@ div{
 header{
 
     background-color: orange;
+    text-align: center;
 
     grid-area: header;
 }
@@ -34,6 +46,11 @@ main{
 
     background-color: red;
     grid-area: main;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 10px;
 }
 
 aside{
