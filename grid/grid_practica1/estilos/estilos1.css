@@ -8,13 +8,13 @@
 
 div{
 
-    height: 100vh;
+    height: calc(100vh - 30px); /* IMPORTANTE para evitar desbordamiento, restar el gap entre filas */
     max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-gap: 10px;
 
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: calc(25% - 30px/4) calc(25% - 30px/4) calc(25% - 30px/4) calc(25% - 30px/4); /* IMPORTANTE para que este centrado, restar el gap proporcional entre columnas */
     grid-template-rows: 15% 35% 35% 15%;
 }
 
