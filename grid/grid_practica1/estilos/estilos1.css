@@ -6,6 +6,17 @@
     box-sizing: border-box;
 }
 
+/*
+
+movil:
+    main columna -> 1 al 5
+    main fila -> 2 al 3
+
+tablet:
+    main column -> 1 al 4
+    main fila -> 2 al 4
+*/
+
 div{
 
     height: calc(100vh - 30px); /* IMPORTANTE para evitar desbordamiento, restar el gap entre filas */
