@@ -1,68 +1,56 @@
-*{
-
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-img{
-
-    width: 100%;
+img {
+  width: 100%;
 }
 
-article{
-
-    background-color: pink;
-    padding: 10px;
+div {
+  /*min-height: 100vh; No es necesario la altura, ya que el contenido es dinamico */
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1fr);
+  /* grid-template-rows: 15% repeat(2,35%) 15%; Hay que quitar las filas */
+  grid-template-areas: "header" "main" "aside" "footer";
 }
-
-div{
-
-    /*min-height: 100vh;*/
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 10px;
-
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 15% repeat(2,35%) 15%;
-
-    grid-template-areas: "header header header header"
-                         "main main main aside"
-                         "main main main aside"
-                         "footer footer footer footer";
+@media only screen and (min-width: 480px) {
+  div {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "header header header header" "main main main aside" "main main main aside" "footer footer footer footer";
+  }
 }
-
-header{
-
-    background-color: orange;
-    text-align: center;
-
-    grid-area: header;
+div header {
+  background-color: orange;
+  text-align: center;
+  grid-area: header;
 }
-
-main{
-
-    background-color: red;
-    grid-area: main;
-    padding: 10px;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    grid-gap: 10px;
+div main {
+  background-color: red;
+  grid-area: main;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-gap: 10px;
 }
-
-aside{
-
-    background-color: green;
-
-    grid-area: aside;
+div main article {
+  background-color: pink;
+  padding: 10px;
 }
-
-footer{
-
-    background-color: blue;
-
-    grid-area: footer;
+div aside {
+  background-color: green;
+  grid-area: aside;
 }
+div footer {
+  background-color: blue;
+  grid-area: footer;
+}/*# sourceMappingURL=estilos3.css.map */

@@ -1,0 +1,88 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+*{
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+img{
+
+    width: 100%;
+}
+
+div{
+
+    /*min-height: 100vh; No es necesario la altura, ya que el contenido es dinamico */
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-columns: repeat(1fr);
+    /* grid-template-rows: 15% repeat(2,35%) 15%; Hay que quitar las filas */
+
+    grid-template-areas: "header"
+                         "main"
+                         "aside"
+                         "footer";
+
+    @include tablet(){
+
+        grid-template-columns: repeat(4,1fr);
+
+        grid-template-areas: "header header header header"
+                            "main main main aside"
+                            "main main main aside"
+                            "footer footer footer footer";
+    }
+    
+
+    header{
+
+        background-color: orange;
+        text-align: center;
+
+        grid-area: header;
+    }
+
+    main{
+
+        background-color: red;
+        grid-area: main;
+        padding: 10px;
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        align-items: start;
+        grid-gap: 10px;
+
+        article{
+
+            background-color: pink;
+            padding: 10px;
+        }
+    }
+
+    aside{
+
+        background-color: green;
+    
+        grid-area: aside;
+    }
+    
+    footer{
+    
+        background-color: blue;
+    
+        grid-area: footer;
+    }
+}
+
+
+
+
+
