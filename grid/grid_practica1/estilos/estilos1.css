@@ -1,75 +1,100 @@
-*{
-
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/*
-
-movil:
-    main columna -> 1 al 5
-    main fila -> 2 al 3
-
-tablet:
-    main column -> 1 al 4
-    main fila -> 2 al 4
-*/
-
-div{
-
-    height: calc(100vh - 30px); /* IMPORTANTE para evitar desbordamiento, restar el gap entre filas */
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 10px;
-
-    grid-template-columns: calc(25% - 30px/4) calc(25% - 30px/4) calc(25% - 30px/4) calc(25% - 30px/4); /* IMPORTANTE para que este centrado, restar el gap proporcional entre columnas */
-    grid-template-rows: 15% 35% 35% 15%;
+div {
+  height: calc(100vh - 30px);
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 35% 35% 15%;
+}
+@media only screen and (min-width: 480px) {
+  div {
+    grid-template-columns: calc(33.3333333333% - 10px) calc(33.3333333333% - 10px) calc(33.3333333333% - 10px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  div {
+    grid-template-columns: calc(25% - 7.5px) calc(25% - 7.5px) calc(25% - 7.5px) calc(25% - 7.5px);
+  }
 }
 
-header{
-
-    background-color: orange;
-
-    grid-column-start: 1;
-    grid-column-end: 5;
-    
-    grid-row-start: 1;
-    grid-row-end: 2;
+header {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
-
-main{
-
-    background-color: red;
-
-    grid-column-start: 1;
+@media only screen and (min-width: 480px) {
+  header {
     grid-column-end: 4;
-    
-    grid-row-start: 2;
-    grid-row-end: 4;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header {
+    grid-column-end: 5;
+  }
 }
 
-aside{
+main {
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+@media only screen and (min-width: 480px) {
+  main {
+    grid-column-end: 3;
+    grid-row-end: 4;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main {
+    grid-column-end: 4;
+  }
+}
 
-    background-color: green;
-
+aside {
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+@media only screen and (min-width: 480px) {
+  aside {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  aside {
     grid-column-start: 4;
     grid-column-end: 5;
-    
-    grid-row-start: 2;
-    grid-row-end: 4;
+  }
 }
 
-footer{
-
-    background-color: blue;
-
-    grid-column-start: 1;
+footer {
+  background-color: blue;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+@media only screen and (min-width: 480px) {
+  footer {
     grid-column-end: 5;
-    
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
+  }
+}/*# sourceMappingURL=estilos1.css.map */

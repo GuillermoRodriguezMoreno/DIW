@@ -1,0 +1,120 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+*{
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+div{
+
+    height: calc(100vh - 30px);
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 35% 35% 15%;
+
+    @include tablet(){
+
+        grid-template-columns: calc(100%/3 - 30px/3) calc(100%/3 - 30px/3) calc(100%/3 - 30px/3);
+    }
+
+    @include escritorio(){
+
+        grid-template-columns: calc(25% - 30px/4) calc(25% - 30px/4) calc(25% - 30px/4) calc(25% - 30px/4);
+    }
+    
+}
+
+header{
+
+    background-color: orange;
+    color: white;
+    text-align: center;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    @include tablet(){
+
+        grid-column-end: 4;
+    }
+
+    @include escritorio(){
+
+        grid-column-end: 5;
+    }
+    
+}
+
+main{
+
+    background-color: red;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    @include tablet(){
+
+        grid-column-end: 3;
+        grid-row-end: 4;
+    }
+
+    @include escritorio(){
+
+        grid-column-end: 4;
+    }
+}
+
+aside{
+
+    background-color: green;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    @include tablet(){
+
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+        grid-row-start: 2;
+    }
+
+    @include escritorio(){
+
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+}
+
+footer{
+
+    background-color: blue;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    @include tablet(){
+
+        grid-column-end: 5;
+    }
+}
