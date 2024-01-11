@@ -1,0 +1,24 @@
+/* Generales */
+$_fuenteGeneral: sans-serif;
+
+/* Clase container */
+$_containerMaxWidth: 1200px;
+
+/* Media Queries*/
+$_pixelesTablet:480px;
+$_pixelesEscritorio: 768px;
+
+/* Header */
+$_headerColorFondo: white;
+$_headerGradiente: linear-gradient(to right, rgb(92, 11, 92), rgb(247, 81, 108));
+$_HeaderFuenteTitulo: sans-serif;
+$_HeaderEscritorioAnchuraBarraBusqueda: 500px;
+$_HeaderTabletAnchuraBarraBusqueda: 400px;
+$_headerImgFondo: url("img/hero.jpg");
+
+/* Botones */
+$_btnCursoColor: rgb(75, 107, 236);
+$_btonVaciarCarritoColor: purple;
+
+/* Main (cursos) */
+$_paddingTextoCurso: 10px;
