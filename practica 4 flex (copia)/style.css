@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/* Generales */
+/* Clase container */
+/* Media Queries*/
+/* Header */
+/* Botones */
+/* Main (cursos) */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Clases */
+.ocultar {
+  display: none;
+}
+
+.container {
+  margin: 20px; /* En tablet y movil */
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
+}
+
+/* Anchura de las imagenes de los cursos*/
+.anchura100 {
+  width: 100%;
+}
+
+/* Precio curso */
+.justifyEnd {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-weight: bold;
+}
+
+/* Estrellas cursos*/
+.margenEstrellas {
+  margin: 10px 0px;
+  -ms-flex-item-align: start;
+      align-self: flex-start; /* para que coja solo su tamaño */
+}
+
+/* Padding texto cursos */
+.textoCurso {
+  padding: 10px;
+}
+
+/* NAV */
+nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+nav #carrito:hover .ocultar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* #contenidoCarrito */
+}
+nav #contenidoCarrito {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: white;
+  padding: 10px;
+  width: 350px; /* fijar anchura contenido del carrito */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+nav #contenidoCarrito div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+nav #contenidoCarrito div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+}
+nav #contenidoCarrito div section img {
+  width: 100px;
+}
+nav #contenidoCarrito div section span {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+nav #contenidoCarrito a {
+  background-color: purple;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* HEADER */
+header {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header #imagenPortatil {
+  /* propiedad imagen fondo */
+  background-image: url("img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  /**************************/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #imagenPortatil div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media only screen and (min-width: 480px) {
+  header #imagenPortatil div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header #imagenPortatil div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+header #imagenPortatil div section {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 480px) {
+  header #imagenPortatil div section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 400px;
+            flex: 0 0 400px; /* Anchura barra de busqueda */
+  }
+}
+@media only screen and (min-width: 768px) {
+  header #imagenPortatil div section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 500px;
+            flex: 0 0 500px; /* Anchura barra de busqueda */
+  }
+}
+header #imagenPortatil div section h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-family: sans-serif;
+}
+header #imagenPortatil div section #barraDeBusqueda {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+  padding: 5px;
+}
+header #imagenPortatil div section #barraDeBusqueda input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header #iconosHeader {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(92, 11, 92)), to(rgb(247, 81, 108)));
+  background: linear-gradient(to right, rgb(92, 11, 92), rgb(247, 81, 108));
+}
+header #iconosHeader div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  header #iconosHeader div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+header #iconosHeader div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+header #iconosHeader div section img {
+  width: 10%; /* tamaño iconos */
+}
+header #iconosHeader div section p {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/* MAIN */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+main #cursos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; /* Para que cursos solo coja altura necesario */
+}
+@media only screen and (max-width: 280px) {
+  main #cursos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+main #cursos section {
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: calc(50% - 1rem);
+      flex-basis: calc(50% - 1rem);
+}
+@media only screen and (min-width: 480px) {
+  main #cursos section {
+    -ms-flex-preferred-size: calc(33.3333333333% - 1rem);
+        flex-basis: calc(33.3333333333% - 1rem);
+  }
+}
+@media only screen and (min-width: 768px) {
+  main #cursos section {
+    -ms-flex-preferred-size: calc(25% - 1rem);
+        flex-basis: calc(25% - 1rem);
+  }
+}
+@media only screen and (max-width: 280px) {
+  main #cursos section {
+    border: none;
+  }
+}
+main #cursos section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main #cursos section div h2 {
+  margin: 10px 0px;
+  font-size: 22px;
+}
+main #cursos section div a {
+  margin-top: 10px;
+  background-color: rgb(75, 107, 236);
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  footer div {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+footer div section {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  footer div section {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+footer div section a {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

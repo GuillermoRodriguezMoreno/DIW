@@ -1,0 +1,350 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+*{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    font-family: $_fuenteGeneral;
+}
+
+/* Clases */
+
+    .ocultar{
+
+        display: none;
+    }
+
+    .container{
+
+        margin: 20px; /* En tablet y movil */
+
+        @include escritorio(){
+
+            max-width: $_containerMaxWidth;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+    }
+
+    /* Anchura de las imagenes de los cursos*/
+    .anchura100{
+
+        width: 100%;
+    }
+
+    /* Precio curso */
+    .justifyEnd{
+
+        align-self: flex-end;
+        font-weight: bold;
+    }
+
+    /* Estrellas cursos*/
+    .margenEstrellas{
+
+        margin: 10px 0px;
+        align-self: flex-start; /* para que coja solo su tamaño */
+    }
+
+    /* Padding texto cursos */
+    .textoCurso{
+
+        padding: $_paddingTextoCurso;
+    }
+
+/* NAV */
+
+    nav{
+
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        #carrito{
+
+            &:hover .ocultar{
+
+                display: flex; /* #contenidoCarrito */
+            }
+            
+        }
+
+        #contenidoCarrito{
+
+            position: absolute;
+            right: 0;
+            top: 60px;
+            background-color: white;
+            padding: 10px;
+            width: 350px; /* fijar anchura contenido del carrito */
+
+            flex-direction: column;
+
+            div{
+
+                display: flex;
+                flex-direction: row;
+
+                section{
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: 5px;
+
+                    img{
+
+                        width: 100px;
+                    }
+
+                    span{
+
+                        text-align: center;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            a{
+                @include boton($_btonVaciarCarritoColor);
+
+                margin-top: 10px;
+            }
+        }
+    }
+
+/* HEADER */
+
+    header{
+
+        color: $_headerColorFondo;
+        display: flex;
+        flex-direction: column;
+
+        #imagenPortatil{
+
+            /* propiedad imagen fondo */
+            background-image: $_headerImgFondo;
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            /**************************/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            div{
+
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                
+
+                @include tablet(){
+
+                    justify-content: flex-start;
+                }
+    
+                @include escritorio(){
+    
+                    justify-content: flex-start;
+                }
+
+                section{
+
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include tablet{
+
+                        flex: 0 0 $_HeaderTabletAnchuraBarraBusqueda; /* Anchura barra de busqueda */
+                    }
+    
+                    @include escritorio(){
+    
+                        flex: 0 0 $_HeaderEscritorioAnchuraBarraBusqueda; /* Anchura barra de busqueda */
+                    }
+    
+                    h1{
+                        
+                        margin-bottom: 20px;
+                        font-size: 28px;
+                        font-family: $_HeaderFuenteTitulo;
+                    }
+    
+                    #barraDeBusqueda{
+    
+                        background-color: white;
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 10px;
+                        padding: 5px;
+        
+                        input{
+        
+                            flex-grow: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        #iconosHeader{
+
+            background: $_headerGradiente;
+            
+            div{
+
+                display: flex;
+                flex-direction: column;
+
+                @include escritorio(){
+
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                section{
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 10px;
+                                       
+                    img{
+
+                        width: 10%; /* tamaño iconos */
+                    }
+    
+                    p{
+                        flex-grow: 1;
+                    }
+                }
+            }  
+        }
+    }
+
+    
+
+/* MAIN */
+
+    main{
+
+        display: flex;
+        flex-direction: column;
+
+        h1{
+
+            text-align: center;
+            margin-bottom: 20px;
+            
+        }
+
+        #cursos{
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start; /* Para que cursos solo coja altura necesario */
+
+            @include inferior280px{
+
+                flex-direction: column;   
+            }
+
+            section{
+
+                border: 1px solid grey;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-basis: calc(100%/2 - 1rem);
+
+                @include tablet(){
+
+                    flex-basis: calc(100%/3 - 1rem);
+                }
+
+                @include escritorio(){
+
+                    flex-basis: calc(100%/4 - 1rem);
+                }
+
+                @include inferior280px{
+
+                    border: none;
+                }
+
+                div{
+
+                    display: flex;
+                    flex-direction: column;
+
+                    h2{
+
+                        margin: 10px 0px;
+                        font-size: 22px;
+                    }
+                    
+                    a{
+
+                        margin-top: 10px;
+                        @include boton($_btnCursoColor);
+                    }
+
+                }
+            }
+        }
+    }
+
+/* FOOTER */
+
+    footer{
+
+        background-color: black;
+
+        @include escritorio(){
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        div{
+
+            @include escritorio(){
+
+                flex-grow: 1;
+            }
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            section{
+
+                @include escritorio(){
+
+                    flex-basis: 25%;
+                }
+
+                flex-basis: 50%;
+                display: flex;
+                flex-direction: column;
+
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
