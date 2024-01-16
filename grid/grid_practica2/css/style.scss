@@ -19,6 +19,20 @@
     margin: 0 auto;
 }
 
+.imagenHeader{
+
+    max-width: 100%;
+}
+
+/* Propiedades generales */
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
 
 /* HEADER */
 header{
@@ -30,6 +44,23 @@ header{
         ul{
 
             color: white;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
+
+            li{
+
+                text-align: center;
+                padding: 10px 0px;
+                color: white;
+                font-weight: bold;
+
+                &:hover{
+
+                    background-color: $_navHoverBgColor;
+                    color: $_navHoverFontColor;
+                }
+            }
         }
     }
 
@@ -42,22 +73,53 @@ header{
 /* MAIN */
 main{
 
-    #aside{
+    grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+
+    .bgAside{
 
         background-color: $_asideBackgroundColor;
+    }
+
+    #aside1{
+
+        text-align: center;
+        color: white;
+
+        li{
+
+            padding: 10px;
+            font-weight: bold;
+        }
+    }
+
+    #aside2, #aside3{
+
+        text-align: center;
     }
 }
 
 /* FOOTER */
 footer{
 
+    background-color: $_footerLinkBackgroundColor;
+
+
     #enlacesFooter{
 
-        background-color: $_footerLinkBackgroundColor;
+        padding: 40px 0px;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     #copy{
 
+        padding: 5px;
+
         background-color: $_footerCopyBackgroundColor;
+        color: $_footerSmallColor;
+        text-align: center;
     }
 }
