@@ -21,6 +21,9 @@ header nav {
 header nav ul {
   color: white;
 }
+header #imagenHeader {
+  max-width: 100%;
+}
 
 /* MAIN */
 main #aside {
