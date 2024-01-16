@@ -1,0 +1,57 @@
+/* Imports */
+@import "_variables.scss";
+
+
+/* RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Classes */
+
+.container{
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header{
+
+    nav{
+
+        background-color: $_navBackgroundColor;
+
+        ul{
+
+            color: white;
+        }
+    }
+}
+
+/* MAIN */
+main{
+
+    #aside{
+
+        background-color: $_asideBackgroundColor;
+    }
+}
+
+/* FOOTER */
+footer{
+
+    #enlacesFooter{
+
+        background-color: $_footerLinkBackgroundColor;
+    }
+
+    #copy{
+
+        background-color: $_footerCopyBackgroundColor;
+    }
+}
