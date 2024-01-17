@@ -8,14 +8,24 @@
           box-sizing: border-box;
 }
 
-/* Classes */
+/* Clases */
 .container {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.imagenHeader {
+.imagen {
   max-width: 100%;
+}
+
+.textoCursiva {
+  font-style: italic;
+  text-align: center;
+  font-size: large;
+}
+
+.textoCentrado {
+  text-align: center;
 }
 
 /* Propiedades generales */
@@ -27,7 +37,17 @@ a {
   text-decoration: none;
 }
 
+/* BODY */
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
+}
+
 /* HEADER */
+header #logo {
+  margin: 20px 0;
+}
 header nav {
   background-color: black;
 }
@@ -47,28 +67,63 @@ header nav ul li:hover {
   color: black;
 }
 header #imagenHeader {
-  max-width: 100%;
+  margin-top: 10px;
 }
 
 /* MAIN */
 main {
-  grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
-  grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
-  grid-template-rows: repeat(4, auto);
+  display: grid;
+  gap: 10px;
 }
-main .bgAside {
-  background-color: #c9c84a;
+@media only screen and (min-width: 768px) {
+  main {
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main h1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main #textoMain {
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
 }
 main #aside1 {
-  text-align: center;
+  background-color: #c9c84a;
   color: white;
+}
+@media only screen and (min-width: 768px) {
+  main #aside1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: self-start;
+    padding: 20px;
+  }
 }
 main #aside1 li {
   padding: 10px;
   font-weight: bold;
 }
-main #aside2, main #aside3 {
-  text-align: center;
+@media only screen and (min-width: 768px) {
+  main #aside2 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main #aside3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
 }
 
 /* FOOTER */
@@ -77,13 +132,18 @@ footer {
 }
 footer #enlacesFooter {
   padding: 40px 0px;
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+footer #enlacesFooter h3 {
+  padding-bottom: 10px;
+}
+footer #enlacesFooter li {
+  padding: 3px;
 }
 footer #copy {
   padding: 5px;
   background-color: #282828;
   color: white;
-  text-align: center;
 }/*# sourceMappingURL=style.css.map */

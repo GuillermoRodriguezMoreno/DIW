@@ -1,4 +1,5 @@
 /* Imports */
+@import "_mixins.scss";
 @import "_variables.scss";
 
 
@@ -11,7 +12,7 @@
     box-sizing: border-box;
 }
 
-/* Classes */
+/* Clases */
 
 .container{
 
@@ -19,9 +20,21 @@
     margin: 0 auto;
 }
 
-.imagenHeader{
+.imagen{
 
     max-width: 100%;
+}
+
+.textoCursiva{
+
+    font-style: italic;
+    text-align: center;
+    font-size: large;
+}
+
+.textoCentrado{
+
+    text-align: center;
 }
 
 /* Propiedades generales */
@@ -34,8 +47,21 @@ a{
     text-decoration: none;
 }
 
+/* BODY */
+body{
+
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+} 
+
 /* HEADER */
 header{
+
+    #logo{
+
+        margin: 20px 0;
+    }
 
     nav{
 
@@ -66,24 +92,53 @@ header{
 
     #imagenHeader{
 
-        max-width: 100%;
+        margin-top: 10px;
     }
 }
 
 /* MAIN */
 main{
 
-    grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
-    grid-template-rows: repeat(4, auto);
+    display: grid;
+    gap: 10px;
 
-    .bgAside{
+    @include escritorio{
 
-        background-color: $_asideBackgroundColor;
+        grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+        grid-template-rows: repeat(4, auto);
+        align-items: center;
+    }
+    
+
+    h1{
+        @include escritorio{
+
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+        }
+    }
+
+    #textoMain{
+
+        @include escritorio{
+
+            grid-column: 2 / 3;
+            grid-row: 2 / 5;
+        }
     }
 
     #aside1{
 
-        text-align: center;
+        @include escritorio{
+
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            align-self: self-start;
+
+            padding: 20px;
+        }
+
+        background-color: $_asideBackgroundColor;
         color: white;
 
         li{
@@ -93,9 +148,22 @@ main{
         }
     }
 
-    #aside2, #aside3{
+    #aside2{
 
-        text-align: center;
+        @include escritorio{
+
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+    }
+
+    #aside3{
+
+        @include escritorio{
+
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
     }
 }
 
@@ -108,10 +176,18 @@ footer{
     #enlacesFooter{
 
         padding: 40px 0px;
-        text-align: center;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+
+        h3{
+            padding-bottom: 10px;
+        }
+
+        li{
+            padding: 3px;
+        }
     }
 
     #copy{
@@ -120,6 +196,5 @@ footer{
 
         background-color: $_footerCopyBackgroundColor;
         color: $_footerSmallColor;
-        text-align: center;
     }
 }
