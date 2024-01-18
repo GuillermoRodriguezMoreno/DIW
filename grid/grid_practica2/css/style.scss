@@ -49,11 +49,7 @@ a{
 
 /* BODY */
 body{
-
-    display: grid;
-    grid-template-columns: 100%;
-    gap: 10px;
-
+    
     font-family: $_fontFamily;
 } 
 
@@ -71,15 +67,15 @@ header{
 
         ul{
 
-            color: white;
-
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
 
             li{
 
+                display: grid;
+
                 text-align: center;
-                padding: 10px 0px;
                 color: white;
                 font-weight: bold;
 
@@ -87,6 +83,11 @@ header{
 
                     background-color: $_navHoverBgColor;
                     color: $_navHoverFontColor;
+                }
+
+                a{
+                    padding: 10px 0px;
+                    color: white;
                 }
             }
         }
