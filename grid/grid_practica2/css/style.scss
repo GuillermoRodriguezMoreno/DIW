@@ -38,6 +38,10 @@
 }
 
 /* Propiedades generales */
+body{
+
+    font-family: $_fontFamily;
+} 
 
 ul{
     list-style: none;
@@ -46,12 +50,6 @@ ul{
 a{
     text-decoration: none;
 }
-
-/* BODY */
-body{
-
-    font-family: $_fontFamily;
-} 
 
 /* HEADER */
 header{
@@ -76,7 +74,6 @@ header{
                 display: grid;
 
                 text-align: center;
-                color: white;
                 font-weight: bold;
 
                 &:hover{
