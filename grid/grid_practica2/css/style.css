@@ -130,6 +130,7 @@ main #aside1 li {
 /* FOOTER */
 footer {
   background-color: #c9c84a;
+  margin-top: 10px;
 }
 footer #enlacesFooter {
   padding: 40px 0px;
