@@ -1,0 +1,25 @@
+@mixin escritorio($pixelesEscritorio){
+
+    @media only screen and (min-width: #{$pixelesEscritorio}) {
+
+        @content;
+        
+    }
+}
+
+@mixin tablet($pixelesTablet){
+
+    @media only screen and (min-width: #{$pixelesTablet}) {
+
+        @content;
+        
+    }
+}
+
+@mixin boton_masInformacion($colorFondo, $colorFuente){
+
+    padding: 10px;
+    background-color: $colorFondo;
+    color: $colorFuente;
+    text-align: center;
+}
