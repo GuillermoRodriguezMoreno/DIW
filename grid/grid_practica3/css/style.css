@@ -9,8 +9,6 @@
   --oscuro:#57a42b;
   --padding:1rem;
   --paddingt:2rem;
-  --pixelesTablet:480px;
-  --pixelesEscritorio:700px;
 }
 
 /* Reset */
@@ -50,6 +48,22 @@ body {
 /* NAV */
 nav {
   background-color: var(--oscuro);
+  padding: 10px 0;
+}
+@media only screen and (min-width: 700px) {
+  nav #contenedorMenu {
+    display: grid;
+    grid-template-columns: 30% 1fr 30%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav #contenedorMenu #logo {
+    grid-column: 1/2;
+  }
+  nav #contenedorMenu #menu {
+    grid-column: 3/4;
+  }
 }
 nav #menu {
   display: grid;
@@ -58,6 +72,18 @@ nav #menu {
 }
 
 /* HEADER (Sobre Nosotros) */
+@media only screen and (min-width: 700px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  header section {
+    grid-column: 2/3;
+  }
+}
 header h1 {
   padding: 20px 0;
 }
@@ -65,8 +91,28 @@ header h1 {
 /* MAIN */
 main {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-columns: repeat(1fr, 2);
   gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+@media only screen and (min-width: 480px) {
+  main .destacado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  main .destacado img {
+    grid-column: 1/2;
+  }
+}
+@media only screen and (min-width: 700px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 main .destacado {
   grid-column: 1/3;

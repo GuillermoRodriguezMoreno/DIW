@@ -1,5 +1,6 @@
 /* imports */
 @import "_mixins.scss";
+@import "_variables.scss";
 
 /* Variables */
 :root {
@@ -11,9 +12,6 @@
 	--oscuro:#57a42b;
 	--padding:1rem;
 	--paddingt:2rem;
-
-    --pixelesTablet:480px;
-    --pixelesEscritorio:700px;
 }
 /* Reset */
 *{
@@ -56,6 +54,25 @@ body{
 nav{
 
     background-color: var(--oscuro);
+    padding: 10px 0;
+
+    @include escritorio(){
+
+        #contenedorMenu{
+
+            display: grid;
+            grid-template-columns: 30% 1fr 30%;
+            align-items: center;
+
+            #logo{
+                grid-column: 1 / 2;
+            }
+
+            #menu{
+                grid-column: 3 / 4;
+            }
+        }
+    }
 
     #menu{
 
@@ -68,6 +85,17 @@ nav{
 /* HEADER (Sobre Nosotros) */
 header{
 
+    @include escritorio(){
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+
+        section{
+            grid-column: 2 / 3 ;
+        }
+    }
+
     h1{
         padding: 20px 0;
     }
@@ -77,8 +105,27 @@ header{
 main{
 
     display: grid;
-    grid-template-columns: calc(1fr/2) calc(1fr/2);
+    grid-template-columns: repeat(1fr, 2);
     gap: 10px;
+    align-items: start;
+
+    @include tablet(){
+
+        .destacado{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+
+            img{
+                grid-column: 1 / 2;
+            }
+        }
+    }
+
+    @include escritorio(){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
     .destacado{
 
@@ -97,7 +144,6 @@ main{
         a{
             @include boton_masInformacion(var(--primario), white)
         }
-
     }
 }
 
