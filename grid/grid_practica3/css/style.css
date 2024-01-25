@@ -136,6 +136,12 @@ footer {
   background-color: var(--primario);
   color: white;
 }
+@media only screen and (min-width: 700px) {
+  footer #contenido {
+    display: grid;
+    grid-template-columns: 30% 20% 2fr;
+  }
+}
 footer #contenido #casasVenta {
   display: grid;
   gap: 40px;
