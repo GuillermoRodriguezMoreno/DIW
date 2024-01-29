@@ -16,10 +16,18 @@
     }
 }
 
-@mixin boton_masInformacion($colorFondo, $colorFuente){
+@mixin boton_masInformacion($colorFondo, $colorFuente, $colorHover){
 
     padding: 10px;
     background-color: $colorFondo;
     color: $colorFuente;
     text-align: center;
+
+    &:hover{
+
+        color: $colorFondo;
+        background-color: $colorHover;
+        font-weight: bold;
+        transition: 1s;
+    }
 }
