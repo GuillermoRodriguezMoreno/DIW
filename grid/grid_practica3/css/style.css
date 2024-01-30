@@ -1,3 +1,7 @@
+/*
+    Preguntar:
+    - Subir texto de destacado en tablet
+*/
 /* imports */
 /* Variables */
 :root {
@@ -24,6 +28,10 @@
   margin: 0 auto;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 /* propiedades generales */
 ul {
   list-style: none;
@@ -40,95 +48,118 @@ img {
 
 /* BODY */
 body {
-  display: grid;
-  gap: 20px;
   background-color: var(--gris);
+  padding-top: var(--paddingt);
 }
 
 /* NAV */
 nav {
-  background-color: var(--oscuro);
-  padding: 10px 0;
+  background-color: var(--primario);
+  padding: var(--padding) 0;
 }
 @media only screen and (min-width: 700px) {
   nav #contenedorMenu {
     display: grid;
     grid-template-columns: 30% 1fr 30%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   nav #contenedorMenu #logo {
     grid-column: 1/2;
-  }
-  nav #contenedorMenu #menu {
-    grid-column: 3/4;
   }
 }
 nav #menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  text-align: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  margin-top: var(--padding);
+}
+@media only screen and (min-width: 700px) {
+  nav #menu {
+    grid-column: 3/4;
+    margin: 0;
+  }
+  nav #menu a:hover {
+    font-size: larger;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
 }
 
-/* HEADER (Sobre Nosotros) */
+/* SOBRE NOSOTROS (HEADER) */
+header {
+  padding: var(--paddingt) 0;
+}
 @media only screen and (min-width: 700px) {
   header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-  header section {
-    grid-column: 2/3;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--paddingt);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 header h1 {
-  padding: 20px 0;
+  padding: var(--padding) 0;
 }
 
 /* MAIN */
 main {
   display: grid;
-  grid-template-columns: repeat(1fr, 2);
-  gap: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-}
-@media only screen and (min-width: 480px) {
-  main .destacado {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-  main .destacado img {
-    grid-column: 1/2;
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--padding);
+  padding-bottom: var(--paddingt);
 }
 @media only screen and (min-width: 700px) {
   main {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    /* Alinear para que solo cojan su espacio */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 main .destacado {
   grid-column: 1/3;
 }
+@media only screen and (min-width: 480px) {
+  main .destacado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 main .destacado img {
   width: 100%;
 }
 main article {
-  border: 1px solid grey;
-  background-color: white;
+  /* Para los margenes voy a usar gap*/
+  display: grid;
+  gap: var(--padding);
+  background-color: var(--claro);
+  border: 1px solid var(--negro);
+  padding-bottom: var(--padding);
+}
+main article h2, main article p, main article a {
+  margin: 0 var(--padding);
+}
+main article span {
+  color: var(--primario);
 }
 main article a {
   padding: 10px;
-  background-color: var(--primario);
+  background-color: #7abe47;
   color: white;
   text-align: center;
+}
+main article a:hover {
+  color: #7abe47;
+  background-color: #ffc845;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 /* FOOTER */
@@ -136,26 +167,41 @@ footer {
   background-color: var(--primario);
   color: white;
 }
+footer #contenido {
+  display: grid;
+  gap: var(--padding);
+  padding: var(--paddingt) 0;
+}
 @media only screen and (min-width: 700px) {
   footer #contenido {
-    display: grid;
     grid-template-columns: 30% 20% 2fr;
   }
 }
-footer #contenido #casasVenta {
-  display: grid;
-  gap: 40px;
-  justify-items: start;
+footer #contenido h2 {
+  margin-bottom: var(--padding);
 }
-footer #contenido #casasVenta article {
+footer #casasVenta #contenedorArticulos {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  gap: 80px;
+  gap: var(--padding);
+}
+@media only screen and (min-width: 700px) {
+  footer #casasVenta #contenedorArticulos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+footer #casasVenta #contenedorArticulos article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+@media only screen and (min-width: 700px) {
+  footer #casasVenta #contenedorArticulos article {
+    gap: var(--paddingt);
+    margin: 0;
+  }
 }
 footer #copy {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
   background-color: var(--oscuro);
-  color: white;
+  padding: var(--padding) 0;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
