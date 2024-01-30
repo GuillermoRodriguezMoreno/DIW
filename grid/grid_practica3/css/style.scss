@@ -212,29 +212,29 @@ footer{
         h2{
             margin-bottom: var(--padding);
         }
-    }
+        
+        #casasVenta{
 
-    #casasVenta{
-
-        #contenedorArticulos{
-
-            display: grid;
-            gap: var(--padding);
-
-            @include escritorio{
-
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-    
-            article{
+            #contenedorArticulos{
     
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 100px;
-        
+                gap: var(--padding);
+    
                 @include escritorio{
-                    gap: var(--paddingt);
-                    margin: 0;
+    
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+        
+                article{
+        
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 100px;
+            
+                    @include escritorio{
+                        gap: var(--paddingt);
+                        margin: 0;
+                    }
                 }
             }
         }

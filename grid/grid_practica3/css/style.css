@@ -188,22 +188,22 @@ footer #contenido {
 footer #contenido h2 {
   margin-bottom: var(--padding);
 }
-footer #casasVenta #contenedorArticulos {
+footer #contenido #casasVenta #contenedorArticulos {
   display: grid;
   gap: var(--padding);
 }
 @media only screen and (min-width: 700px) {
-  footer #casasVenta #contenedorArticulos {
+  footer #contenido #casasVenta #contenedorArticulos {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
-footer #casasVenta #contenedorArticulos article {
+footer #contenido #casasVenta #contenedorArticulos article {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
 }
 @media only screen and (min-width: 700px) {
-  footer #casasVenta #contenedorArticulos article {
+  footer #contenido #casasVenta #contenedorArticulos article {
     gap: var(--paddingt);
     margin: 0;
   }
