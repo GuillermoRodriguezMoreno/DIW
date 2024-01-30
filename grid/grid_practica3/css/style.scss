@@ -1,8 +1,3 @@
-/*
-    Preguntar:
-    - Subir texto de destacado en tablet
-*/
-
 /* imports */
 @import "_mixins.scss";
 @import "_variables.scss";
@@ -55,13 +50,13 @@ body{
 
     background-color: var(--gris);
     padding-top: var(--paddingt);
+    font-family:$_fontFamily;
 }
 
 /* NAV */
 nav{
 
     background-color: var(--primario);
-    padding: var(--padding) 0;
 
     #contenedorMenu{
 
@@ -72,6 +67,7 @@ nav{
 
             #logo{
                 grid-column: 1 / 2;
+                align-self: center;
             }
         }
     }
@@ -80,8 +76,7 @@ nav{
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        justify-items: center;
-        align-items: center;
+    
         font-weight: bold;
 
         margin-top: var(--padding);
@@ -90,12 +85,25 @@ nav{
 
             grid-column: 3 / 4;
             margin: 0; // Reset margin
+        }
 
-            a:hover{
-                font-size: larger;
-                transition: 0.5s;
+        li{
+            display: grid;
+            text-align: center;
+
+            &:hover{
+
+                background-color: var(--secundario);
+                transition: 1s;
+            }
+
+            a{
+                padding: var(--paddingt) 0;
+    
             }
         }
+
+        
     }
 }
 
@@ -146,6 +154,14 @@ main{
         img{
 
             width: 100%;
+        }
+
+        #texto{
+
+            display: grid; // para espaciado
+            gap: var(--padding);
+            align-items: center; // añinear boton
+            padding: var(--padding) 0;
         }
     }
 
