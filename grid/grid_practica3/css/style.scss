@@ -203,6 +203,7 @@ footer{
         
         padding: var(--paddingt) 0;
 
+        // Media query para tener 3 columnas
         @include escritorio{
 
             grid-template-columns: 30% 20% 2fr;
@@ -212,7 +213,7 @@ footer{
         h2{
             margin-bottom: var(--padding);
         }
-        
+
         #casasVenta{
 
             #contenedorArticulos{
@@ -220,6 +221,7 @@ footer{
                 display: grid;
                 gap: var(--padding);
     
+                // Media query para acomodar articulos automaticamente
                 @include escritorio{
     
                     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -231,6 +233,7 @@ footer{
                     grid-template-columns: repeat(2, 1fr);
                     gap: 100px;
             
+                    // Media query para reducir separacion entre imagen y texto
                     @include escritorio{
                         gap: var(--paddingt);
                         margin: 0;
