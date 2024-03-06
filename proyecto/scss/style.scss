@@ -1,0 +1,15 @@
+// COLORES
+$principal: #db4d4d;
+$secundario: #000000;
+$blanco: #ffffff;
+
+// FUENTE
+$fuente: 'open-sans', sans-serif;
+
+// VARIABLES BOOSTRAP
+$primary: $principal;
+$secondary: $secundario;
+$light: $blanco;
+
+// Siempre al final
+@import "../libs/bootstrap/scss/bootstrap.scss"

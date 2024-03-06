@@ -1,0 +1,14 @@
+// COLORES
+$principal: #f4cfdf;
+$secundario: #b6d8f2;
+$terciario: #e26fa1;
+$oscuro: #5784ba;
+
+// VARIABLES BOOSTRAP
+$primary: $principal;
+$secondary: $secundario;
+$success: $terciario;
+$dark: $oscuro;
+
+// Siempre al final
+@import "../libs/bootstrap/scss/bootstrap.scss"
