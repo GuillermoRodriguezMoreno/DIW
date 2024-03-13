@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administracion</title>
+    <title>Inicio sesion</title>
     <link rel="stylesheet" href="../libs/font/fontawesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -52,98 +52,42 @@
         </nav>
     </div>
     <!-- FIN Navbar -->
-
-    <!-- Cabecera -->
-    <div class="container-xl g-0 bg-secondary py-4" style="margin-top: 55px;">
-        <ul class="navbar-nav d-flex flex-md-row flex-column justify-content-around text-center">
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Administrar usuarios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Administrar clubs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Administrar eventos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Páginas</a>
-            </li>
-        </ul>
+    <!-- Inicio sesion -->
+    <div class="container-xl text-center mb-3 d-flex justify-content-center" style="margin-top: 55px;">
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Usuario...">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="text" class="form-control" id="password" placeholder="Contraseña...">
+            </div>
+            <p>¿Has olvidado tu contraseña?</p>
+            <div class="d-flex flex-column align-items-center">
+                <div class="row col-6">
+                    <button class="btn btn-primary mb-3">Inicio sesión</button>
+                </div>
+                <div class="row col-6">
+                    <button class="btn btn-primary mb-3">Regístrate</button>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <i class="fa-brands fa-google" style="height: 30px;"></i>
+                <p class="m-0">Inicia sesión con Google</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-3 my-3">
+                <i class="fa-brands fa-apple" style="height: 30px;"></i>
+                <p class="m-0">Inicia sesión con Apple</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <i class="fa-brands fa-microsoft" style="height: 30px;"></i>
+                <p class="m-0">Inicia sesión con Microsoft</p>
+            </div>
+        </div>
     </div>
-    <!-- FIN Cabecera -->
-    <!-- Contenido Principal -->
-    <div class="container-xl g-0 py-4 px-3">
-        <div class="row d-flex flex-column-reverse flex-md-row align-items-center justify-content-between g-0 gap-3">
-            <form class="col-12 col-sm-6 col-md-4 d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Buscar</button>
-            </form>
-            <button class="btn btn-primary col-12 col-sm-6 col-md-2" type="">Crear usuario</button>
-        </div>
-        <div class="row py-4">
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <p class="col-5">Usuario1</p>
-                <p class="col-5">Email@ejemplo.es</p>
-            </div>
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <button class="btn btn-primary col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <p class="col-5">Usuario1</p>
-                <p class="col-5">Email@ejemplo.es</p>
-            </div>
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <button class="btn btn-primary col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <p class="col-5">Usuario1</p>
-                <p class="col-5">Email@ejemplo.es</p>
-            </div>
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <button class="btn btn-primary col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <p class="col-5">Usuario1</p>
-                <p class="col-5">Email@ejemplo.es</p>
-            </div>
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <button class="btn btn-primary col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <p class="col-5">Usuario1</p>
-                <p class="col-5">Email@ejemplo.es</p>
-            </div>
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <button class="btn btn-primary col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <p class="col-5">Usuario1</p>
-                <p class="col-5">Email@ejemplo.es</p>
-            </div>
-            <div class="row col-md-6 text-center d-flex justify-content-between g-0">
-                <button class="btn btn-primary col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
-            </div>
-        </div>
-    <!-- FIN Contenido Principal -->
+    <!-- FIN Inicio sesion -->
     <!-- Footer-->
     <div class="container-fluid bg-secondary g-0 py-4">
         <div class="container-xl">
@@ -180,7 +124,6 @@
         </div>
     </div>
     <!-- Fin Footer-->
-
     <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../libs/font/all.min.js"></script>
 </body>
