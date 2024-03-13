@@ -1,0 +1,8 @@
+/* 
+* Margen para ajustar el espacio en blanco entre el nav 
+* y el contenido al usar posicionamiento fixed
+*/
+.marginNav {
+  margin-top: 80px; }
+
+/*# sourceMappingURL=custom.css.map */
