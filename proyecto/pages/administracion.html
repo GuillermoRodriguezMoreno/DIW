@@ -17,7 +17,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-xl g-0">
+        <div class="container-xxl g-0">
             <a class="navbar-brand d-flex align-items-center text-dark link-primary" href="../index.html">
                 <img src="../images/logo" alt="Logo" width="65" height="54" class="d-inline-block align-text-top">
                 <span>FightHub</span>
@@ -57,7 +57,7 @@
     </nav>
     <!-- FIN Navbar -->
     <!-- Cabecera -->
-    <div class="container-xl g-0 bg-secondary py-4 marginNav">
+    <div class="container-xxl g-0 bg-secondary py-4 marginNav">
         <ul class="navbar-nav d-flex flex-md-row flex-column justify-content-around text-center">
             <li class="nav-item">
                 <a class="nav-link link-primary text-light" href="#">Inicio</a>
@@ -78,7 +78,7 @@
     </div>
     <!-- FIN Cabecera -->
     <!-- Contenido Principal -->
-    <div class="container-xl g-0 py-4 px-3">
+    <div class="container-xxl g-0 py-4 px-3">
         <div class="row d-flex flex-column-reverse flex-md-row align-items-center justify-content-between g-0 gap-3">
             <form class="col-12 col-sm-6 col-md-4 d-flex" role="search">
                 <input class="form-control me-2 rounded-5" type="search" placeholder="Buscar..." aria-label="Search">
@@ -93,7 +93,7 @@
             </div>
             <div class="row col-md-6 text-center d-flex justify-content-between g-0">
                 <button class="btn btn-warning col-5" type="">Editar</button>
-                <button class="btn btn-danger col-5" type="">Eliminar</button>
+                <button class="btn btn-danger col-5" data-toggle="modal" data-target="#exampleModal">Eliminar</button>
             </div>
         </div>
         <div class="row py-4">
@@ -226,65 +226,66 @@
                 <button class="btn btn-danger col-5" type="">Eliminar</button>
             </div>
         </div>
-        <!-- FIN Contenido Principal -->
-        <!-- Footer-->
-        <div class="container-fluid bg-dark g-0 py-4">
-            <div class="container-xl">
-                <div class="row text-center">
-                    <div class="col-3">
-                        <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-instagram p-0"
-                                style="height: 50px;"></i></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-facebook-f p-0"
-                                style="height: 50px;"></i></a>
-                    </div>
-                    <div class="col-3">
-
-                        <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-twitter p-0"
-                                style="height: 50px;"></i></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-whatsapp p-0"
-                                style="height: 50px;"></i></a>
-                    </div>
+    </div>
+    <!-- FIN Contenido Principal -->
+    <!-- Footer-->
+    <div class="container-fluid bg-dark g-0 py-4">
+        <div class="container-xxl">
+            <div class="row text-center">
+                <div class="col-3">
+                    <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-instagram p-0"
+                            style="height: 50px;"></i></a>
                 </div>
-                <div class="row text-center text-light d-none d-md-flex" style="margin-top: 30px;">
-                    <div class="col-sm-4 d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand link-primary text-light" href="../index.html">
-                            <img src="../images/logo" alt="Logo" width="100px">
-                            FightHub
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="" class="text-decoration-none">
-                            <h5>Informacion y Ayuda</h5>
-                        </a>
-                        <ul class="list-unstyled m-0">
-                            <li><a href="#" class="text-reset link-primary text-decoration-none">Politica de
-                                    Privacidad</a></li>
-                            <li><a href="#" class="text-reset link-primary text-decoration-none">Cookies</a></li>
-                            <li><a href="#" class="text-reset link-primary text-decoration-none">Aviso Legal</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="" class="text-decoration-none">
-                            <h5>Contacto</h5>
-                        </a>
-                        <ul class="list-unstyled m-0">
-                            <li><a href="#" class="text-reset link-primary text-decoration-none">Correo Electrónico</a>
-                            </li>
-                            <li><a href="#" class="text-reset link-primary text-decoration-none">Redes Sociales</a></li>
-                            <li><a href="#" class="text-reset link-primary text-decoration-none">Ubicacion</a></li>
-                        </ul>
-                    </div>
+                <div class="col-3">
+                    <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-facebook-f p-0"
+                            style="height: 50px;"></i></a>
+                </div>
+                <div class="col-3">
+
+                    <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-twitter p-0"
+                            style="height: 50px;"></i></a>
+                </div>
+                <div class="col-3">
+                    <a href="" class="text-light link-primary d-inline-block"><i class="fa-brands fa-whatsapp p-0"
+                            style="height: 50px;"></i></a>
                 </div>
             </div>
+            <div class="row text-center text-light d-none d-md-flex" style="margin-top: 30px;">
+                <div class="col-sm-4 d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand link-primary text-light" href="../index.html">
+                        <img src="../images/logo" alt="Logo" width="100px">
+                        FightHub
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none">
+                        <h5>Informacion y Ayuda</h5>
+                    </a>
+                    <ul class="list-unstyled m-0">
+                        <li><a href="#" class="text-reset link-primary text-decoration-none">Politica de
+                                Privacidad</a></li>
+                        <li><a href="#" class="text-reset link-primary text-decoration-none">Cookies</a></li>
+                        <li><a href="#" class="text-reset link-primary text-decoration-none">Aviso Legal</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" class="text-decoration-none">
+                        <h5>Contacto</h5>
+                    </a>
+                    <ul class="list-unstyled m-0">
+                        <li><a href="#" class="text-reset link-primary text-decoration-none">Correo Electrónico</a>
+                        </li>
+                        <li><a href="#" class="text-reset link-primary text-decoration-none">Redes Sociales</a></li>
+                        <li><a href="#" class="text-reset link-primary text-decoration-none">Ubicacion</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!-- Fin Footer-->
+    </div>
+    <!-- Fin Footer-->
 
-        <script src="../dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../libs/font/all.min.js"></script>
+    <script src="../dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/font/all.min.js"></script>
 </body>
 
 </html>
